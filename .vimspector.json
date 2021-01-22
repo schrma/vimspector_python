@@ -1,0 +1,25 @@
+{
+  // Based on https://github.com/puremourning/vimspector/blob/master/support/test/python/simple_python/.vimspector.json
+  "$schema": "https://puremourning.github.io/vimspector/schema/vimspector.schema.json",
+  "configurations": {
+    "run": {
+      "adapter": "debugpy",
+      "configuration": {
+        "request": "launch",
+        "type": "python",
+        "cwd": "${workspaceRoot}",
+        "program": "${file}",
+        "args#json": "${args:[\"-i\", \"input.txt\", \"-o\", \"output.txt\"]}",
+        "stopOnEntry": true,
+        "console": "integratedTerminal"
+      },
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "",
+          "userUnhandled": ""
+        }
+      }
+    }
+  }
+}
